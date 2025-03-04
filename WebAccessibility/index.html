@@ -11,9 +11,9 @@
             <!-- Navigation -->
             <img src="favicon.ico" alt="TimeCo Company Logo" />
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                <ul role="menubar">
+                    <li role="menuitem"><a href="index.html">Home</a></li>
+                    <li role="menuitem"><a href="about.html">About Us</a></li>
                 </ul>
                 <!-- end of ul -->
             </nav>
@@ -25,10 +25,6 @@
             <article>
                 <!--Self contained content-->
                 <h1>The Benefits and Drawback of HTML</h1>
-                <time datetime="2021-05-15T10:48:12-05:00"
-                    ><!--Format for datetime-->
-                    05/15/21
-                </time>
                 <!-- end of time -->
                 <p lang="fr">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -47,6 +43,40 @@
                         Lorem ipsum dolor sit amet consectetur, adipisicing
                         elit. Incidunt culpa distinctio adipisci mollitia
                     </p>
+                    <!-- VS shortcut for table  table>tbody>tr*[num]-->
+                    <table>
+                        <caption>
+                            User From The Database
+                        </caption> <!-- end of caption -->
+                        <thead>
+                            <tr>
+                                <th colspan="3">User Details</th>
+                            </tr> <!-- end of tr -->
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                            </tr> <!-- end of tr -->
+                            <tr>
+                                <th>Id</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                            </tr> <!-- end of tr -->
+                        </thead> <!-- end of thead -->
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Tim</td>
+                                <td>Corey</td>
+                            </tr> <!-- end of tr -->
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Sue</td>
+                                <td>Storm</td>
+                            </tr> <!-- end of tr -->
+                        </tbody> <!--
+                    </table>
+                    <!-- end of table -->
                 </section>
                 <!-- end of section -->
                 <section>
