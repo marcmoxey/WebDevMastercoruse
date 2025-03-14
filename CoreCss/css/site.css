@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap");
+
 html {
-    font-size: 20px;
+    font-size: 16px;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 1.5rem; /* 50% larger than font size */
 }
 
 body {
@@ -7,8 +11,8 @@ body {
 }
 
 h1 {
-    /* font-size: 2em; 2x times size of parent elem (body tag)*/
-    font-size: 2rem; /* 2x size of the root elem (html tag) */
+    font-size: 2em; /*2x times size of parent elem (body tag)*/
+    font-family: "Zen Dots", cursive;
 }
 
 /* Ony the element with id of 'firstcharacter' get this style 
@@ -16,11 +20,12 @@ only one item can have the id on the page
 if  have multiple pages can have sane IDs as other pages cannot have same id inside the page */
 /* #firstcharacter {
     font-size: 50px;
-} */ /* End of span style */
+} */
 
 /* can have multiply elements on the page with the same class */
 .starting-character {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 /* must have 'starting-character class and overall-character class */
@@ -29,10 +34,11 @@ if  have multiple pages can have sane IDs as other pages cannot have same id ins
 }
 
 .sample-copy {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* 2x size of the root elem (html tag) */
 }
 
 /* footer elem with the class 'sample-copy' change the color to red*/
 footer.sample-copy {
     color: red;
+    font-style: italic;
 }
