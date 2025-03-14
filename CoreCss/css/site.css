@@ -6,6 +6,28 @@ h1 {
     font-size: 40px;
 } /* End of H1 style */
 
-span {
+/* Ony the element with id of 'firstcharacter' get this style 
+only one item can have the id on the page
+if  have multiple pages can have sane IDs as other pages cannot have same id inside the page */
+/* #firstcharacter {
     font-size: 50px;
-} /* End of span style */
+} */ /* End of span style */
+
+/* can have multiply elements on the page with the same class */
+.starting-character {
+    font-size: 50px;
+}
+
+/* must have 'starting-character class and overall-character class */
+.starting-character.first-overall-character {
+    color: red;
+}
+
+.sample-copy {
+    font-size: 24px;
+}
+
+/* footer elem with the class 'sample-copy' change the color to red*/
+footer.sample-copy {
+    color: red;
+}
