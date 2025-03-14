@@ -1,10 +1,15 @@
+html {
+    font-size: 20px;
+}
+
 body {
-    font-size: 18px;
-} /* End of body style */
+    font-size: 20px;
+}
 
 h1 {
-    font-size: 40px;
-} /* End of H1 style */
+    /* font-size: 2em; 2x times size of parent elem (body tag)*/
+    font-size: 2rem; /* 2x size of the root elem (html tag) */
+}
 
 /* Ony the element with id of 'firstcharacter' get this style 
 only one item can have the id on the page
@@ -15,7 +20,7 @@ if  have multiple pages can have sane IDs as other pages cannot have same id ins
 
 /* can have multiply elements on the page with the same class */
 .starting-character {
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 /* must have 'starting-character class and overall-character class */
@@ -24,7 +29,7 @@ if  have multiple pages can have sane IDs as other pages cannot have same id ins
 }
 
 .sample-copy {
-    font-size: 24px;
+    font-size: 1.25rem;
 }
 
 /* footer elem with the class 'sample-copy' change the color to red*/
