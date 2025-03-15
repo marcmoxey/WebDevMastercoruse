@@ -4,6 +4,7 @@ html {
     font-size: 16px;
     font-family: "Roboto", Arial, sans-serif;
     line-height: 1.5rem; /* 50% larger than font size */
+    text-align: justify;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
 h1 {
     font-size: 2em; /*2x times size of parent elem (body tag)*/
     font-family: "Zen Dots", cursive;
+    text-transform: uppercase;
 }
 
 /* Ony the element with id of 'firstcharacter' get this style 
@@ -22,6 +24,11 @@ if  have multiple pages can have sane IDs as other pages cannot have same id ins
     font-size: 50px;
 } */
 
+p {
+    text-indent: 2rem;
+    text-transform: capitalize;
+}
+
 /* can have multiply elements on the page with the same class */
 .starting-character {
     font-size: 2rem;
@@ -30,7 +37,8 @@ if  have multiple pages can have sane IDs as other pages cannot have same id ins
 
 /* must have 'starting-character class and overall-character class */
 .starting-character.first-overall-character {
-    color: red;
+    /* color: rgb(0, 38, 255); */
+    color: #00ff00;
 }
 
 .sample-copy {
@@ -41,4 +49,10 @@ if  have multiple pages can have sane IDs as other pages cannot have same id ins
 footer.sample-copy {
     color: red;
     font-style: italic;
+}
+
+.key-info {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(233, 76, 76);
+    text-decoration-style: wavy;
 }
