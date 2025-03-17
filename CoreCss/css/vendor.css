@@ -1,0 +1,24 @@
+
+#dog-on-floor {
+    width: 30%;
+}
+
+/* Most specific */
+/* #special-id {
+    font-size: 30px;
+} */
+
+/* class of test(parent) has a child element of test-span*/
+.test .test-span {
+    font-size: 10px;
+}
+/* more specific */
+.test-span {
+    font-size: 20px;
+}
+
+/* General Element - least specific*/
+span {
+    font-size: 8px !important;
+}
+
