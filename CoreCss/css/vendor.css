@@ -2,11 +2,11 @@
 #dog-on-floor {
     width: 30%;
 }
-
-/* Most specific */
-/* #special-id {
+/* 
+Most specific */
+#special-id {
     font-size: 30px;
-} */
+}
 
 /* class of test(parent) has a child element of test-span*/
 .test .test-span {
