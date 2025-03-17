@@ -61,8 +61,17 @@ footer.sample-copy {
     /* visibility: hidden;  not show it but keep the space */
     /* display: none; /* takes it of the page*/
     display: inline-block; /* doesn't take up the full width if it doesn't need to*/
-    border:  1PX solid black;
-    width: 300px;
-    padding: 0; /* white space inside of the border*/
-    margin: 0; /* white space outside of the border */
+    /* border:  1PX solid black; */
+    border-color: red;
+    border-width: 5px;
+    border-style: dotted;
+    width: 25%;
+    /*Box Model */
+    /* padding: 15px; white space inside of the border */
+    padding-left:  15px;
+    margin: 10px 5px 10px 0; /* white space outside of the border  - top left bottom right */ 
+}
+
+.ninja.better {
+    height: 300px;
 }
