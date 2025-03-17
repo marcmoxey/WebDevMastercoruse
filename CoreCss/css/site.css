@@ -43,6 +43,7 @@ p, div{
 
 .sample-copy {
     font-size: 1.25rem; /* 2x size of the root elem (html tag) */
+    display: flow-root;
 }
 
 /* footer elem with the class 'sample-copy' change the color to red*/
@@ -66,6 +67,7 @@ footer.sample-copy {
     border-width: 5px;
     border-style: dotted;
     width: 25%;
+    min-width: 200px;
     /*Box Model */
     /* padding: 15px; white space inside of the border */
     padding-left:  15px;
@@ -73,5 +75,11 @@ footer.sample-copy {
 }
 
 .ninja.better {
-    height: 300px;
+    min-height: 300px;
+}
+
+#dog-on-floor {
+    width: 30%;
+    float: left;
+
 }
