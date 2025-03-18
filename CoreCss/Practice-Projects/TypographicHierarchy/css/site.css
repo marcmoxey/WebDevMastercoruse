@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+html {
+    font-family: 'Merriweatther', Arial,sans-serif;
+    line-height: 1.5em;
+}
+
+#first-section {
+    font-size: 20px;
+    
+}
+
+#second-section {
+    font-size: 28px;
+    line-height: 1.5em;
+}
+
+#third-section {
+    font-size: 32px;
+    line-height: 1.5em;
+}
+
+#fourth-section {
+    font-size: 36px;
+    line-height: 1.5em;
+}
+
+#quote {
+    font-style: italic;
+    border-left: 1px dotted green;
+    padding-left: 8px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+
+}
