@@ -1,0 +1,19 @@
+
+body {
+    margin: 2px;
+    padding: 0;
+}
+img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border:  2px solid red;
+}
+
+img:hover {
+    border: 2px solid purple
+}
+
+div {
+    display: inline-block;
+}

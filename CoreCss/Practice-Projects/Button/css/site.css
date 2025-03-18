@@ -1,0 +1,33 @@
+
+.btn-primary {
+    color: white;
+    background-color: rgb(37, 143, 230);
+    padding: 10px;
+    width: 85px;
+    border: none;
+
+
+}
+
+.btn-primary:hover {
+    background-color: rgb(40, 97, 145);
+}
+
+
+.btn-primary.secondary {
+    background-color: rgb(148, 148, 148);
+}
+
+
+.btn-primary.secondary:hover {
+    background-color: rgb(80, 75, 75);
+}
+
+
+.btn-primary.danger {
+    background-color: rgb(216, 78, 78);
+}
+
+.btn-primary.danger:hover {
+    background-color: rgb(153, 62, 62);
+}
