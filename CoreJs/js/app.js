@@ -28,3 +28,32 @@ console.log(testString + testString);
 // console.log(j);
 
 // let j = 2; 
+
+
+// Arrays 
+const people = ['Tim', 'Sue', 'Mary', 'Bob']; 
+people.push('Greg');
+const lastPerson = people.pop();
+console.log(people);
+console.log(lastPerson);
+console.log(people.indexOf('Bob'));
+console.log(Array.isArray(lastPerson));
+// console.log(lastPerson.startsWith('Greg'));
+people.push('Tom');
+people.push('Tammy');
+people.push('Berry');
+
+const coolPeople = people.filter(function(person) {
+    return person.startsWith('T') 
+    // Tim -> 'Tim'.startWith('T')
+});
+console.log(coolPeople);
+console.log(people);
+
+
+console.log(lastPerson.substr(0, 1));
+
+const firstLetters = people.map(function(person) {
+    return person.substring(0,1)
+});
+console.log(firstLetters);
