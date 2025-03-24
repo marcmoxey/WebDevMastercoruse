@@ -114,9 +114,14 @@ footer {
 }
 
 .food-menu {
-    text-align: center;
+     text-align: center; 
 }
 
 .food-items {
     list-style-type: none;
+}
+
+.food-items li {
+    text-indent: -1rem;
+    margin-bottom: 2rem;
 }

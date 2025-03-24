@@ -1,0 +1,2 @@
+1. docker build -t <name of image> .
+2. docker run --name <name of container> -p <port> <image name>
