@@ -139,5 +139,4 @@ let threeLetterAnimals = animals.filter(function(animal){
 });
 
 console.log(threeLetterAnimals);
->>>>>>> c7effbac3e6b607c67f9931929d286a840aff32d
 
