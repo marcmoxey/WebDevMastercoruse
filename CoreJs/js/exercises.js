@@ -43,6 +43,7 @@ console.log(a);
 b = temp;
 console.log(5);
 
+<<<<<<< HEAD
 // Working with variables
 let num1 = 9;
 let num2 = 10;
@@ -76,4 +77,67 @@ firstFruit = secondFruit;
 console.log(firstFruit);
 secondFruit = temp1
 console.log(secondFruit);
+
+
+const fruits = ['apple', 'orange', 'grapes', 'mangos'];
+console.log(fruits);
+console.log(fruits[0]);
+
+
+fruits[1] = 'berries'; 
+console.log(fruits);
+
+
+let colors = []; 
+colors.push('Red');
+colors.push('Blue');
+colors.push('Green'); 
+console.log(colors);
+colors.pop()
+console.log(colors);
+
+let numbers = [1,2,3,4,5];
+
+const double = numbers.map(function(number) {
+    return number * 2
+});
+
+console.log(double);
+
+let word = 'JavaScript';
+
+console.log(word.substring(0, 3)); 
+
+let words = ['hello', 'world', 'javascript']
+
+let capWord = words.map(function(word){
+    return word.substring(0,1).toUpperCase() + word.substring(1).toLowerCase()
+})
+
+console.log(capWord);
+const names = ['Jonathan', 'Samantha', 'Alex', 'Christina'];
+
+
+const threeLetters = names.map(function(name) {
+     return name.substring(0,3)
+});
+
+console.log(threeLetters);
+
+let nums = [1,4,7,10,13,16]
+
+let evenNums = nums.filter(function(num){
+    return num % 2 == 0
+});
+
+console.log(evenNums);
+
+const animals = ['cat', 'elephant', 'dog', 'giraffe', 'ant']
+
+let threeLetterAnimals = animals.filter(function(animal){
+    return animal.length === 3
+});
+
+console.log(threeLetterAnimals);
+>>>>>>> c7effbac3e6b607c67f9931929d286a840aff32d
 

@@ -29,6 +29,7 @@ console.log(testString + testString);
 
 // let j = 2; 
 
+<<<<<<< HEAD
 // Working with Variables
 
 let x = 1;
@@ -67,3 +68,33 @@ console.log(fullName);
 
 // Arrays
 
+=======
+
+// Arrays 
+const people = ['Tim', 'Sue', 'Mary', 'Bob']; 
+people.push('Greg');
+const lastPerson = people.pop();
+console.log(people);
+console.log(lastPerson);
+console.log(people.indexOf('Bob'));
+console.log(Array.isArray(lastPerson));
+// console.log(lastPerson.startsWith('Greg'));
+people.push('Tom');
+people.push('Tammy');
+people.push('Berry');
+
+const coolPeople = people.filter(function(person) {
+    return person.startsWith('T') 
+    // Tim -> 'Tim'.startWith('T')
+});
+console.log(coolPeople);
+console.log(people);
+
+
+console.log(lastPerson.substr(0, 1));
+
+const firstLetters = people.map(function(person) {
+    return person.substring(0,1)
+});
+console.log(firstLetters);
+>>>>>>> c7effbac3e6b607c67f9931929d286a840aff32d
