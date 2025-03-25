@@ -227,3 +227,43 @@ if(userRole.toLowerCase() === 'admin') {
     console.log('Access denied');
     
 }
+
+
+//  Loops 
+let i = 0; 
+
+while(i < 10) {
+    console.log(i++);
+    
+}
+
+
+let n = 100; 
+
+for (let i = 1; i < n; i++) {
+    console.log(i + n);
+    
+}
+
+let favColors = ['red', 'blue', 'green', 'yellow'];
+
+for(let i = 0; i < favColors.length; i++) {
+    console.log(favColors[i]);
+    
+}
+
+let person = { name: 'Alice', age: 25, city: 'New York'};
+
+for(p in person) {
+    console.log(p + ': ' + person[p]);
+    
+}
+
+let wrd = 'hello'; 
+let reverseWord = "";
+
+for(let i = wrd.length - 1; i >= 0; i--) {
+   reverseWord += wrd[i]
+}
+
+console.log(reverseWord);

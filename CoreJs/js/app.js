@@ -145,3 +145,31 @@ switch (day.toLowerCase()) {
         console.log('I dont know what what day of the week that is');
         break;
 }
+
+
+// Loops 
+const group = ['Tim', 'Sue', 'Dan', 'Mary', 'Bob'];
+
+// for(let i = 0; i < group.length; i++) {
+//     console.log(group[i]);
+    
+// }
+
+// for (const person of group) { 
+//     // loop over each person in group 
+//     // put it in person object
+//     console.log(person);
+    
+// }
+
+// group.forEach(function(person) {
+//     console.log(person);
+    
+// })
+
+while(group.length > 0) {
+    console.log(group.pop());
+    
+}
+console.log(group);
+
