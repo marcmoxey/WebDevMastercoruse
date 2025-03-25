@@ -140,3 +140,91 @@ let threeLetterAnimals = animals.filter(function(animal){
 
 console.log(threeLetterAnimals);
 
+
+
+// Conditionals 
+let num = 3; 
+
+if(num >= 1) {
+    console.log('Positive number');
+    
+} else if (num < 0) {
+    console.log('Negative Number');
+    
+} else if (num === 0) {
+    console.log('Zero');
+    
+}
+
+let score = 59; 
+
+if (score >= 90) {
+    console.log('A');
+} else if (score >= 80 && score <= 89) {
+    console.log('B');
+    
+} else if(score >= 70 && score <= 79) {
+    console.log('C');
+    
+} else if(score >= 60 && score <= 69) {
+    console.log('D');
+} else {
+    console.log('F');
+    
+}
+
+
+let number = 27; 
+
+if(number % 2 == 0) {
+    console.log('Even number');
+    
+} else {
+    console.log('Odd number');
+}
+
+
+let day = 5;
+
+switch (day) {
+    case 1:
+        console.log('Monday');
+        break;
+    case 2:
+        console.log('Taco Tuesday');
+        break;
+    case 3:
+        console.log('Wednesday');
+        break;
+    case 4:
+        console.log(' Thursday');
+        break;
+    case 5:
+        console.log('Its Friday!');
+        break;
+    case 6:
+        console.log('Saturday');
+       break;
+    case  7:
+        console.log('Sunday');
+    default:
+        console.log('Invalid day');
+        break;
+}
+
+
+let userRole = 'editor'
+
+if(userRole.toLowerCase() === 'admin') {
+    console.log('Access granted: Full control');
+    
+} else if (userRole.toLowerCase() == 'editor') {
+    console.log('Access granted: Edit rights');
+    
+} else if(userRole.toLowerCase() === 'viewer') {
+    console.log('Access granted: Read-only');
+    
+} else {
+    console.log('Access denied');
+    
+}

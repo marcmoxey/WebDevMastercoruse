@@ -95,3 +95,53 @@ const firstLetters = people.map(function(person) {
     return person.substring(0,1)
 });
 console.log(firstLetters);
+
+
+
+// Conditionals
+const firstName = 'Marc';
+const middleName = 'Guess';
+const lastName = 'Moxey';
+
+if(firstName.toLowerCase() === 'marc' && lastName.toLowerCase() === 'moxey') {
+    console.log('Hello teacher');
+    
+} else if (firstName.toLowerCase() == 'marc') {
+    console.log('Hello other Marc');
+    
+} else if (lastName.toLowerCase() == 'moxey') {
+    console.log('Cool last name');
+    
+} else {
+    console.log(`Hello student`);
+    
+}
+
+
+if((firstName.toLowerCase() === 'marc' || lastName.toLowerCase() === 'moxey') && middleName.toLowerCase() === 'guess') {
+    console.log('Thats a pretty cool name');
+    
+}
+
+// const x = '1'; 
+// const y = 1; 
+
+// if(x == y ) {  // value comparison
+//     console.log('The two value are equal');
+    
+// }
+
+const day = 'Tuesday'
+
+switch (day.toLowerCase()) {
+    case 'monday':
+        console.log('Welcome to the first day of the week');
+        break;
+    case 'tuesday':
+        console.log('I hope your week is going well');
+        break;
+        
+    default:
+        console.log('I dont know what what day of the week that is');
+        break;
+}
