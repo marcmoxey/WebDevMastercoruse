@@ -77,7 +77,7 @@ console.log(firstFruit);
 secondFruit = temp1
 console.log(secondFruit);
 
-
+// Arrays
 const fruits = ['apple', 'orange', 'grapes', 'mangos'];
 console.log(fruits);
 console.log(fruits[0]);
@@ -267,3 +267,52 @@ for(let i = wrd.length - 1; i >= 0; i--) {
 }
 
 console.log(reverseWord);
+
+
+// Functions 
+function greetUser(name) {
+    console.log(`Hello ${name}`);
+    
+}
+
+greetUser('Marc');
+
+function calculateDiscount(price, discount = .10) {
+        let offPrice = price * discount;
+        return price - offPrice
+}
+
+console.log(calculateDiscount(55.72));
+console.log(calculateDiscount(75,.30));
+
+
+
+const add = (x,y) =>  {
+    return x + y
+}
+
+console.log(add(21,4));
+
+
+const multiply = (x,y ) => {
+   let output =  x * y
+   return output
+}
+
+
+console.log(multiply(5,5));
+
+
+function isEven(number) {
+    if(number % 2 == 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+
+console.log(isEven(3));
+
+
+// objects

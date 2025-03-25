@@ -173,3 +173,92 @@ while(group.length > 0) {
 }
 console.log(group);
 
+// Functions 
+function add(x = 3, y = 6)  {
+    return x + y;
+}
+
+
+console.log(add(9, 10));
+
+console.log(add()); 
+
+
+function greetUser() {
+    console.log('Hello User');
+    console.log('Welcome to our website');
+    console.log('We hope you enjoy it');
+        
+    console.log(`The values of 5 + 3 = ${add(5,3)}`);
+    
+    
+}
+
+greetUser()
+
+
+const subtract = (x, y) => {
+    return x - y;
+}
+
+console.log(subtract(7,3));
+
+// parameter declaration 'p' 
+const filtered = people.filter(p => p.substring(0,1) === 'T')
+console.log(filtered);
+
+
+
+// objects 
+const person =  {
+    firstName: 'Marc',
+    lastName: 'Moxey',
+    age: 23,
+    isAlive: true,
+    // thisTest: this,
+    // sub objects
+    address: {
+        city: 'NYC',
+        state: 'NY',
+    },
+    fullName: function() {
+        // console.log(this);
+        
+        return `${this.firstName} ${this.lastName}`;
+    }
+};
+
+// function test() {
+//     return this;
+// }
+// console.log(test());
+
+// person.firstName = 'Marc-Anthony'
+// person.address.country = 'USA'; // adding to object later
+// console.log(person.fullName());
+// //console.log(person);
+// console.log(person.thisTest);
+
+// function greetUser(p) {
+//     console.log(p.fullName());
+    
+// }
+
+// greetUser(person); 
+
+
+// const { fName, age, address: {city} } = person;
+
+// console.log(city)
+
+// for(const prop in person) {
+//     //console.log(`${prop} : ${person[prop]}`);
+//     if(person.hasOwnProperty) {
+//         console.log(`${prop} : ${person[prop]}`);
+//     }
+    
+// }
+
+
+// API - Application Programming Interface
+// JSON - JavaScript Object Notation
