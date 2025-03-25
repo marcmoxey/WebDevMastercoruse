@@ -43,7 +43,6 @@ console.log(a);
 b = temp;
 console.log(5);
 
-<<<<<<< HEAD
 // Working with variables
 let num1 = 9;
 let num2 = 10;

@@ -59,8 +59,8 @@ let birthday = new Date(2001, 4, 28, 0, 0, 0, 0);
 console.log(birthday.getMonth() + 2);
 
 
-const firstName = 'Marc';
-const lastName = 'Moxey';
+let firstName = 'Marc';
+let lastName = 'Moxey';
 let fullName = `${firstName} ${lastName}`;
 console.log(fullName);
 
@@ -99,9 +99,9 @@ console.log(firstLetters);
 
 
 // Conditionals
-const firstName = 'Marc';
+firstName = 'Marc';
 const middleName = 'Guess';
-const lastName = 'Moxey';
+lastName = 'Moxey';
 
 if(firstName.toLowerCase() === 'marc' && lastName.toLowerCase() === 'moxey') {
     console.log('Hello teacher');
