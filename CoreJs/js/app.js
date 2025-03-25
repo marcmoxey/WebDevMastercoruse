@@ -29,7 +29,6 @@ console.log(testString + testString);
 
 // let j = 2; 
 
-<<<<<<< HEAD
 // Working with Variables
 
 let x = 1;
@@ -68,7 +67,6 @@ console.log(fullName);
 
 // Arrays
 
-=======
 
 // Arrays 
 const people = ['Tim', 'Sue', 'Mary', 'Bob']; 
@@ -97,4 +95,3 @@ const firstLetters = people.map(function(person) {
     return person.substring(0,1)
 });
 console.log(firstLetters);
->>>>>>> c7effbac3e6b607c67f9931929d286a840aff32d
