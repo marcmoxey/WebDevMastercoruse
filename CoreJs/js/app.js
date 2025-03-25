@@ -9,7 +9,7 @@ const testBoolean = true;
 
 //const testConst; // needs init value
 
-
+ 
 //testString = 'this is a BETTER TEST';
 console.log(testString + testString);
 
@@ -28,3 +28,42 @@ console.log(testString + testString);
 // console.log(j);
 
 // let j = 2; 
+
+// Working with Variables
+
+let x = 1;
+let y = 2;
+let result = 5;
+
+// result += x; 
+// result++
+
+// + = * / 
+
+result *= 2;
+result /= 4;
+result -= 2
+
+
+console.log(result);
+
+let isAlive = true;
+
+// isAlive = false
+// isAlive = !isAlive
+
+console.log(!isAlive);
+console.log(isAlive);
+
+let birthday = new Date(2001, 4, 28, 0, 0, 0, 0);
+console.log(birthday.getMonth() + 2);
+
+
+const firstName = 'Marc';
+const lastName = 'Moxey';
+let fullName = `${firstName} ${lastName}`;
+console.log(fullName);
+
+
+// Arrays
+

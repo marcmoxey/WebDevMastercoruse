@@ -1,3 +1,4 @@
+// Variables 
 
 // Declare and log variables 
 const name = "Marc";
@@ -41,4 +42,38 @@ console.log(a);
 
 b = temp;
 console.log(5);
+
+// Working with variables
+let num1 = 9;
+let num2 = 10;
+let sum = num1 + num2;
+console.log(sum);
+
+let greetings = 'Hello'; 
+let name1 = 'Marc'; 
+let message = `${greetings} ${name1}`;
+console.log(message);
+
+
+let length = 10;
+let width = 5;
+let area = length * width
+console.log(`The area is: ${area}`);
+
+let counter = 0; 
+counter++
+counter++ 
+counter++
+console.log(counter); 
+
+let firstFruit = 'Apple';
+let secondFruit = 'Banana';
+
+let temp1 = firstFruit;
+console.log(temp1);
+
+firstFruit = secondFruit;
+console.log(firstFruit);
+secondFruit = temp1
+console.log(secondFruit);
 
