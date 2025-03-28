@@ -314,3 +314,56 @@ person1.social = '123-45-6789';
 console.log(person1.social);
 console.log(person1.getFullName());
 
+// IIFE  - Immediately Invoked Function Expression
+function greetUser() {
+    console.log('Welcome to our app');
+    
+}
+
+(function(app) {
+
+    app.greetUser = function() { 
+
+        console.log('Welcome to our other app');
+        
+    }
+
+
+})(window.otherApp = window.otherApp || {}); 
+
+const myName = 'Marc Moxey';
+(function(app, myName) {
+    app.myName = myName;
+    app.greetUser = function() {
+        console.log(`Hello ${myName}`);
+    }    
+    // using class in IIFE
+    app.Person = class {
+        constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+    }
+})(window.app = window.app || {}, myName); // IIFE; 
+
+
+console.log(window.app);
+
+greetUser();
+app.greetUser();
+const p = new app.Person('Marc', 'Moxey');  
+console.log(p.firstName);
+
+
+// attached to prev IIFE
+(function(app) {
+    app.sayGoodbye = function() {
+        console.log('Goodbye User');
+        
+    }
+
+}(window.app = window.app || {})); // IIFE;
+
+app.sayGoodbye();
+
+otherApp.greetUser(); // different namespace 

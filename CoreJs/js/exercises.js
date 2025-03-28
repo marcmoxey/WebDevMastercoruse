@@ -462,3 +462,87 @@ employee1.firstName = 'Marc';
 employee1.lastName = 'Moxey';
 employee1.jobTitle = 'Software Engineer';
 console.log(employee1.getFullName());
+
+
+// IIFE 
+
+(function(app) {
+    app.greetings = function() {
+        console.log('Hello World');
+        
+    }
+
+})(window.app = window.app || {});
+
+app.greetings();
+
+const nm = 'Marc Moxey';
+(function(app, nm) {
+    app.nm = nm;
+    app.greetUser = function() {
+        console.log(`Hello ${app.nm}`);
+        
+    }
+})(window.app = window.app || {}, nm);
+
+app.greetUser();
+
+(function(app) {
+
+    app.Add = function(x,y) {
+        return x + y;
+    }
+})(window.app = window.app || {});
+
+console.log(app.Add(5,10));
+
+
+(function(app) {
+    app.counter = 0;
+    app.increment = function() {
+        app.counter++
+    }
+
+    app.getCount = function() { 
+        console.log(app.counter);
+        
+    }
+
+})(window.app = window.app || {});  
+
+app.increment();
+app.increment();
+
+app.getCount(); 
+
+(function(app) {
+
+    app.Add = function(x,y) {
+        return x + y
+    }
+
+    app.subtract = function(x,y) { 
+        return x - y
+    }
+
+    app.multiply = function(x,y) {
+        return x * y;
+    }
+
+    app.divide = function(x,y) {
+        if(y == 0) {
+            return 'Cannot divide by zero';
+        } else {
+            return x / y;
+        }
+    }
+
+})(window.app = window.app || {});  
+
+console.log(app.subtract(10,7));
+console.log(app.multiply(5,5));
+console.log(app.divide(10,0));
+console.log(app.divide(10,2));
+
+
+
