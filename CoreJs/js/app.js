@@ -262,3 +262,15 @@ const person =  {
 
 // API - Application Programming Interface
 // JSON - JavaScript Object Notation
+
+//delete person.fullName; 
+
+console.log(person.fullName());
+
+//console.log(JSON.stringify(person)); // prepare to send to API
+
+const receivedInfo = JSON.stringify(person); 
+const parseInfo = JSON.parse(receivedInfo); // parse the JSON string to an object
+
+console.log(parseInfo.firstName);
+console.log(parseInfo.fullName());
