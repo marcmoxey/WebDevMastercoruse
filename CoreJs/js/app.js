@@ -273,4 +273,7 @@ const receivedInfo = JSON.stringify(person);
 const parseInfo = JSON.parse(receivedInfo); // parse the JSON string to an object
 
 console.log(parseInfo.firstName);
-console.log(parseInfo.fullName());
+//console.log(parseInfo.fullName());
+
+
+// CLasses 

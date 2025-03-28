@@ -316,3 +316,77 @@ console.log(isEven(3));
 
 
 // objects
+
+const book = {
+    title: 'Cat in the Hat',
+    author: 'Dr. Seuss',
+    yearPublished: 1957,
+
+};
+
+console.log(book.title);
+
+book.yearPublished = 1958;
+console.log(book.yearPublished);
+book.genre = 'childrens literature';
+console.log(book.genre);
+
+
+// const receivedInfo = JSON.stringify(book);
+// const parsedInfo = JSON.parse(receivedInfo);
+// console.log(parsedInfo.author);
+
+const laptop = {
+    brand: 'Apple',
+    model: 'M1 MacBook Air',
+    year: 2021
+
+};
+
+for (const info in laptop) {
+    console.log(`${info}: ${laptop[info]}`);
+}
+
+const mathOperations = { 
+
+    multiply: function(x,y){
+        return x * y;
+    },
+    divide: function(x,y){
+        if(y == 0) {
+            return 'Cannot divide by zero';
+        } else {
+            return x / y;
+        }
+       
+    }
+};
+
+console.log(mathOperations.multiply(5,5));
+console.log(mathOperations.divide(10,0));
+console.log(mathOperations.divide(10,2));
+
+const movies = [ 
+
+     movie = {
+        title: 'Inception',
+        director: 'Christopher Nolan',
+        year: 2010
+    }, 
+    movie = {
+        title: 'The Matrix',
+        director: 'The Wachowskis',
+        year: 1999
+    },
+    movie = {
+        title: 'Interstellar',
+        director: 'Christopher Nolan',
+        year: 2014
+    }
+];
+
+for (const movie of movies) { 
+
+     console.log(`${movie.title} (${movie.year}) directed by ${movie.director}`);
+     
+}
