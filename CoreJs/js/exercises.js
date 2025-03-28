@@ -390,3 +390,75 @@ for (const movie of movies) {
      console.log(`${movie.title} (${movie.year}) directed by ${movie.director}`);
      
 }
+
+
+// Classes 
+
+class Person {
+    firstName = '';
+    lastName = '';
+
+    #age = '';
+
+    set Age(age) { 
+        this.#age = age;
+    }
+
+    get Age() {
+        return this.#age;
+    }
+     
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+}
+
+const person1 = new Person(); 
+person1.firstName = 'Marc';
+person1.lastName = 'Moxey';
+console.log(person1.getFullName());
+
+person1.Age = 23;
+console.log(person1.Age);
+
+
+class Car {
+    make = '';
+    model = '';
+    year = '';
+
+   getCarInfo() {
+        return `${this.make} ${this.model} (${this.year})`;
+    }
+}
+
+const car1 = new Car(); 
+car1.make = 'Toyota';
+car1.model = 'GR86';
+car1.year = 2023;
+console.log(car1.getCarInfo());
+
+class MathHelper {
+    static add(x,y) {
+        return x + y;
+    }
+}
+
+const result = MathHelper.add(5,10);
+console.log(result);
+
+class Employee extends Person {
+    jobTitle = '';
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName} (${this.jobTitle})`;
+    }
+}
+
+const employee1 = new Employee(); 
+employee1.firstName = 'Marc';
+employee1.lastName = 'Moxey';
+employee1.jobTitle = 'Software Engineer';
+console.log(employee1.getFullName());

@@ -277,3 +277,40 @@ console.log(parseInfo.firstName);
 
 
 // CLasses 
+
+// class - blueprint; class instance - house
+
+class Person {
+
+   #ssn = '';
+
+    constructor(firstName, lastName) {
+       this.firstName = firstName;
+        this.lastName = lastName;
+        
+    }
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+
+    get social() {
+        return `***-**-${this.#ssn.substr(this.#ssn.length - 4)}`;
+    }
+
+    set social(ssn) {
+        this.#ssn = ssn;
+    }
+}
+
+const person1 = new Person('Marc', 'Moxey');
+const person2 = new Person('Sue', 'Storm'); // new instance 
+console.log(person1.lastName);
+console.log(person2.lastName);
+
+
+person1.social = '123-45-6789';
+console.log(person1.social);
+console.log(person1.getFullName());
+
