@@ -1,4 +1,4 @@
-
+'use strict';
 // Variables
 
 // let - design to change 
@@ -315,55 +315,101 @@ console.log(person1.social);
 console.log(person1.getFullName());
 
 // IIFE  - Immediately Invoked Function Expression
-function greetUser() {
-    console.log('Welcome to our app');
+// function greetUser() {
+//     console.log('Welcome to our app');
+    
+// }
+
+// (function(app) {
+
+//     app.greetUser = function() { 
+
+//         console.log('Welcome to our other app');
+        
+//     }
+
+
+// })(window.otherApp = window.otherApp || {}); 
+
+// const myName = 'Marc Moxey';
+// (function(app, myName) {
+//     app.myName = myName;
+//     app.greetUser = function() {
+//         console.log(`Hello ${myName}`);
+//     }    
+//     // using class in IIFE
+//     app.Person = class {
+//         constructor(firstName, lastName) {
+//             this.firstName = firstName;
+//             this.lastName = lastName;
+//         }
+//     }
+// })(window.app = window.app || {}, myName); // IIFE; 
+
+
+// console.log(window.app);
+
+// greetUser();
+// app.greetUser();
+// const p = new app.Person('Marc', 'Moxey');  
+// console.log(p.firstName);
+
+
+// // attached to prev IIFE
+// (function(app) {
+//     app.sayGoodbye = function() {
+//         console.log('Goodbye User');
+        
+//     }
+
+// }(window.app = window.app || {})); // IIFE;
+
+// app.sayGoodbye();
+
+// otherApp.greetUser(); // different namespace 
+
+
+// Scope 
+// var a = 4;
+// function testing() {
+//     var a = 5;
+//     console.log(`Inside testing(): ${a}`);
+    
+// }
+// testing();
+// console.log(`global: ${a}`);
+
+
+const b = 4;
+
+if(true) {
+    let b = 5;
+    console.log(b);
     
 }
 
-(function(app) {
-
-    app.greetUser = function() { 
-
-        console.log('Welcome to our other app');
-        
-    }
+console.log(b);
 
 
-})(window.otherApp = window.otherApp || {}); 
 
-const myName = 'Marc Moxey';
-(function(app, myName) {
-    app.myName = myName;
-    app.greetUser = function() {
-        console.log(`Hello ${myName}`);
-    }    
-    // using class in IIFE
-    app.Person = class {
-        constructor(firstName, lastName) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-        }
-    }
-})(window.app = window.app || {}, myName); // IIFE; 
+// Use Strict 
+
+// let myTest = 2;
+// myTest = 3;
+
+// let test = {};
+
+// 'test'.myInfo = 'Hello';
+// console.log('test'.myInfo);
+
+// function add2(x,x) {
+//     return x + x;
+// }
 
 
-console.log(window.app);
-
-greetUser();
-app.greetUser();
-const p = new app.Person('Marc', 'Moxey');  
-console.log(p.firstName);
+// (function(app) {
+//     'use strict';
+// })();
 
 
-// attached to prev IIFE
-(function(app) {
-    app.sayGoodbye = function() {
-        console.log('Goodbye User');
-        
-    }
-
-}(window.app = window.app || {})); // IIFE;
-
-app.sayGoodbye();
-
-otherApp.greetUser(); // different namespace 
+// Best Practices 
