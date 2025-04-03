@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Demo</title>
+        <link rel="stylesheet" href="./css/site.css">
+        <link rel="icon" href="favicon.ico">
+    </head>
+    <body>
+        <main>
+            <h1>Welcome to the DOM Demo</h1>
+            <p id="first-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad velit, officiis doloremque harum laborum earum et. Laborum numquam labore porro expedita ullam totam! Nostrum!</p>
+            
+            <p id="second-paragraph" class="support-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque nobis magnam odio ratione! Veniam?</p>
+
+            <p id="third-paragraph" class="support-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, voluptas ab? Veniam itaque nulla quaerat. Nam, consectetur quaerat. Nemo, distinctio.</p>
+
+            <div id="list-section">
+                <ul id="key-items">
+                    <li>Our First LI</li>
+                    <li>Our Second LI</li>
+                    <li>Our Second LI</li>
+                </ul>
+            </div>
+
+        <script>
+            // DOM / Document - holds all the objects on the page
+            // Window - global scope 
+            
+        //    const demo = document.getElementById('key-items');
+        //    console.log(demo);
+
+        // let p = document.querySelector('.support-paragraph'); // select any element on the page, but get the first one 
+        // p = document.querySelector('#third-paragraph');
+        // p = document.querySelector('div ul li')
+        // console.log(p);
+        
+        let q = document.querySelectorAll('.support-paragraph'); // include all items
+        q.forEach(el => console.log(el));
+        
+
+        </script>
+        </main>
+    </body>
+</html>
