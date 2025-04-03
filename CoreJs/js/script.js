@@ -18,6 +18,9 @@
 })(window.app = window.app || {});
 
 console.log(app.complicatedFormula(23));
+console.log("Hello from our app");
+
+
 // console.error('This is an error')
 // console.warn("This is a warning");
 
