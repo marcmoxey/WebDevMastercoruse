@@ -11,3 +11,10 @@ let newItem = document.createElement('li');
 newItem.textContent = 'New Item';
 list.appendChild(newItem);
 
+
+let removeBtn = document.getElementById('removeBtn');
+let text = document.getElementById('text');
+
+removeBtn.addEventListener('click',function(){
+    text.remove();
+});

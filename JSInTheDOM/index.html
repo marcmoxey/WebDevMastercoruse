@@ -11,7 +11,7 @@
             <h1>Welcome to the DOM Demo</h1>
             <p id="first-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad velit, officiis doloremque harum laborum earum et. Laborum numquam labore porro expedita ullam totam! Nostrum!</p>
             
-            <p id="second-paragraph" class="support-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque nobis magnam odio ratione! Veniam?</p>
+            <p id="second-paragraph" class="support-paragraph d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque nobis magnam odio ratione! Veniam?</p>
 
             <p id="third-paragraph" class="support-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, voluptas ab? Veniam itaque nulla quaerat. Nam, consectetur quaerat. Nemo, distinctio.</p>
 
@@ -30,14 +30,48 @@
         //    const demo = document.getElementById('key-items');
         //    console.log(demo);
 
+        // SELECTING ELEMENTS 
+
         // let p = document.querySelector('.support-paragraph'); // select any element on the page, but get the first one 
         // p = document.querySelector('#third-paragraph');
         // p = document.querySelector('div ul li')
         // console.log(p);
         
-        let q = document.querySelectorAll('.support-paragraph'); // include all items
-        q.forEach(el => console.log(el));
+        // MANIPULATING ELEMENTS 
+
+        // let q = document.querySelectorAll('.support-paragraph'); // include all items
+        // q.forEach(el => console.log(el));
         
+        // const p = document.getElementById('first-paragraph');
+        // p.innerText = 'This is a test';
+
+        // const list = document.querySelector('ul');
+        // list.innerHTML = '<li> test 1 </li> <li>test 2 </li>';
+
+    
+        // const p2 = document.querySelector('.support-paragraph');
+        // p2.remove();
+
+        // change style
+        // const headingItem = document.querySelector('h1');
+        // headingItem.style.color = 'green';
+        // headingItem.style.fontSize = '2.5rem';
+
+        // add classes to element
+        // const p1 = document.querySelector('p');
+        // p1.classList.add('dark-mode');
+
+        const paragraphs = document.querySelectorAll('p');
+        // paragraphs.forEach(el => {
+        //     el.classList.remove('support-paragraph');
+        //     el.classList.add('dark-mode');
+        // });
+
+        paragraphs.forEach(el => {
+            if(el.classList.contains('support-paragraph')) {
+                el.classList.add('dark-mode');
+            }
+        })
 
         </script>
         </main>
