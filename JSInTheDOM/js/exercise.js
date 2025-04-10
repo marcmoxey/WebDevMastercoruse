@@ -1,4 +1,4 @@
-
+// Selecting Elements 
 const message = document.querySelector('#message');
 message.textContent = 'Hello DOM!';
 
