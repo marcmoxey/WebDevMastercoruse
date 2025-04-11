@@ -47,3 +47,36 @@ const task = document.getElementById('task');
 const newTask = document.createElement('li');
 newTask.textContent = 'Task 2';
 task.appendChild(newTask);
+
+
+
+// Traversing Elements
+
+// Get Parent Element
+const child = document.querySelector('span');
+const parent = child.parentElement;
+console.log(parent);
+
+// Access All Children
+const fruitsList = document.getElementById('fruits');
+const fruits = fruitsList.children;
+console.log(fruits);
+
+//Navigate to Next/Previous Sibling
+const middle = document.getElementById('middle');
+console.log(middle.nextElementSibling.textContent);
+console.log(middle.previousElementSibling.textContent);
+
+// Loop Through All Children
+const color = document.getElementById('colors');
+console.log(color.firstElementChild.textContent);
+console.log(color.lastElementChild.textContent);
+
+
+let cards = document.getElementById('cards');
+let cardsChild = cards.children;
+
+for(let i = 0; i < cardsChild.length; i++) {
+    console.log(cardsChild[i].textContent);
+    
+}
