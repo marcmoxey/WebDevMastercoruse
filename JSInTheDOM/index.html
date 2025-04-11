@@ -24,8 +24,9 @@
             </div>
 
         <script>
-            // DOM / Document - holds all the objects on the page
-            // Window - global scope 
+
+        // DOM / Document - holds all the objects on the page
+        // Window - global scope 
             
         //    const demo = document.getElementById('key-items');
         //    console.log(demo);
@@ -61,17 +62,67 @@
         // const p1 = document.querySelector('p');
         // p1.classList.add('dark-mode');
 
-        const paragraphs = document.querySelectorAll('p');
+        // const paragraphs = document.querySelectorAll('p');
         // paragraphs.forEach(el => {
         //     el.classList.remove('support-paragraph');
         //     el.classList.add('dark-mode');
         // });
 
-        paragraphs.forEach(el => {
-            if(el.classList.contains('support-paragraph')) {
-                el.classList.add('dark-mode');
-            }
-        })
+        // paragraphs.forEach(el => {
+        //     if(el.classList.contains('support-paragraph')) {
+        //         el.classList.add('dark-mode');
+        //     }
+        // })
+
+        // Traversing Elements
+
+        // getting child element
+        // const section = document.getElementById('list-section');
+        // console.log(section);
+        // const list = section.querySelector('ul');
+        // console.log(list);
+        // const items = list.children;
+        // const itemsArray = Array.from(items);
+        // for(let i = 0; i < items.length; i++) {
+        //     console.log(items[i]);
+            
+        // }
+        // console.log(items);
+        // itemsArray.forEach(el => console.log(el));
+        
+        // getting parent element
+        // const section = document.getElementById('key-items');
+        // const parent = section.parentElement
+        // console.log(parent);
+        // const mainElement = section.closest('main');
+        // console.log(mainElement);
+
+        // getting second list item
+        let listItem = document.querySelector('li'); // can be on the same level/ indent
+        // nextElementSibling, previousElementSibling
+        // const nextItem = listItem.nextElementSibling;
+        // console.log(nextItem);
+        // const finalItem = nextItem.nextElementSibling;
+        // console.log(finalItem);
+        // const unknownItem = finalItem.nextElementSibling;
+        // console.log(unknownItem);
+
+        while(listItem !== null) {
+            console.log(listItem);
+            listItem = listItem.nextElementSibling;
+            
+        }
+        
+        
+        
+        
+       
+
+        
+
+        
+        
+        
 
         </script>
         </main>
