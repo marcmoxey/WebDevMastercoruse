@@ -80,3 +80,86 @@ for(let i = 0; i < cardsChild.length; i++) {
     console.log(cardsChild[i].textContent);
     
 }
+
+// Creating html 
+
+const imageUrls = [
+    'https://via.placeholder.com/150',
+    'https://via.placeholder.com/200',
+    'https://via.placeholder.com/250'
+];
+
+// const imgContainer = document.getElementById('image-container')
+// const fragment = new DocumentFragment();
+// imageUrls.forEach(url => {
+//     const img = document.createElement('img');
+//     img.src = url;
+//     img.alt = 'Place holder';
+//     fragment.appendChild(img)
+
+// });
+
+// imgContainer.appendChild(fragment);
+
+
+const people = [
+    { name: 'Alice', age: 30, city: 'New York' },
+    { name: 'Bob', age: 25, city: 'Los Angeles' },
+    { name: 'Charlie', age: 35, city: 'Chicago' }
+  ];
+
+  const tbody = document.querySelector('#people-table tbody')
+  console.log(tbody);
+  const fragment = new DocumentFragment();
+  people.forEach(person => {
+    const row = document.createElement('tr');
+    Object.values(person).forEach(value => {
+        const cell = document.createElement('td');
+        cell.textContent = value;
+        row.appendChild(cell);
+    })
+    fragment.appendChild(row);
+  })
+  tbody.appendChild(fragment);
+
+
+
+  const foods = ['Pizza', 'Burger', 'Pasta', 'Salad', 'Sushi'];
+
+  
+  const select = document.getElementById('food-dropdown'); 
+  //console.log(select);
+  const fragment1 = new DocumentFragment();
+  foods.forEach(food => {
+    const option = document.createElement('option');
+    option.value = food;
+    option.textContent = `${food}`;
+    //console.log(option.textContent);
+    
+    fragment1.appendChild(option);
+  });
+
+  select.appendChild(fragment1);
+
+  const links = [
+    { text: 'Google', url: 'https://www.google.com' },
+    { text: 'Facebook', url: 'https://www.facebook.com' },
+    { text: 'Twitter', url: 'https://www.twitter.com' }
+  ];
+  
+  const linkList = document.getElementById('link-list');
+  const fragment2 = new DocumentFragment();
+  
+  links.forEach(link => {
+    const li = document.createElement('li');
+    const anchor = document.createElement('a');
+
+    anchor.href = link.url;
+    anchor.text = link.text;
+    anchor.target = '_blank'
+    
+    li.appendChild(anchor);
+    fragment2.appendChild(li);
+  });
+
+  linkList.appendChild(fragment2);

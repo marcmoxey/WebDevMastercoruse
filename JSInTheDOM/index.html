@@ -19,8 +19,12 @@
                 <ul id="key-items">
                     <li>Our First LI</li>
                     <li>Our Second LI</li>
-                    <li>Our Second LI</li>
+                    <li>Our Third LI</li>
                 </ul>
+            </div>
+
+            <div id="good-foods">
+
             </div>
 
         <script>
@@ -115,6 +119,30 @@
 
 
         // Creating HTML
+
+        // const list = document.getElementById('key-items')
+        // //console.log(list);
+        // list.innerHTML += '<li>Our Fourth Li</li>';
+
+        const foods=['Hamburger', 'Hot Dogs', 'Pasta', 'Bread'];
+        const foodList = document.getElementById('good-foods');
+        // foods.forEach(food => {
+        //     // foodList.innerHTML += `<li>${food}</li>`;
+        //     const el = document.createElement('li');
+        //     el.innerText = food;
+        //     foodList.appendChild(el);
+        // });
+        
+        // creating a fragment
+        const fragment = new DocumentFragment();
+        foods.forEach(food => {
+            const el = document.createElement('li')
+            el.innerHTML = food; 
+            fragment.appendChild(el);
+        });
+
+        // add fragment to page
+        foodList.appendChild(fragment);
         
         
         
