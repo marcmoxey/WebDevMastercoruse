@@ -8,14 +8,14 @@
     </head>
     <body>
         <main>
-            <h1>Welcome to the DOM Demo</h1>
+            <h1>DOM Demo</h1>
             <!-- <p id="first-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad velit, officiis doloremque harum laborum earum et. Laborum numquam labore porro expedita ullam totam! Nostrum!</p>
             
             <p id="second-paragraph" class="support-paragraph d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque nobis magnam odio ratione! Veniam?</p>
 
             <p id="third-paragraph" class="support-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, voluptas ab? Veniam itaque nulla quaerat. Nam, consectetur quaerat. Nemo, distinctio.</p> -->
 
-            <div id="list-section">
+            <!-- <div id="list-section">
                 <a id="add-to-list" href="#">Add New Element to list</a>
                 <ul id="key-items">
                     <li>Our First LI</li>
@@ -32,7 +32,30 @@
 
             <div id="good-foods">
 
+            </div> -->
+            <form action="" method="post">
+                <div>
+                    <label for="fullName">Full Name: </label>
+                    <input id="fullName" type="text" name="fullName" required>
+                </div>
+                <div>
+                    <label for="guests">Number of Guests: </label>
+                    <input id="guests" type="number" name="guests" required>
+                </div>
+                <div>
+                    <button id="submit" type="submit">Submit</button>
+                    <button id="reset" type="reset">Reset</button>
+                </div>
+            </form>
+            <div id="list-section">
+                <h2>Guestbook Entries</h2>
+                <small>Total Guests: <span id="totalGuests">0</span></small>
+                <ul id="items">
+
+                </ul>
             </div>
+
+           
 
         <script>
             'use strict';
@@ -154,9 +177,9 @@
      
         
         // Events 
-        const list = document.getElementById('key-items');
-        const addAction = document.getElementById('add-to-list');
-        let i = 4;
+        // const list = document.getElementById('key-items');
+        // const addAction = document.getElementById('add-to-list');
+        // let i = 4;
 
 
     //    addAction.addEventListener('click', addFromLink);
@@ -222,53 +245,72 @@
         //     item.classList.remove('new-item');
         // }
        
-        const displayMessage = document.getElementById('display-message');
-        let timeoutId = 0;
-        const sendEmailAnchor = document.getElementById('send-email');
-        const cancelEmailAnchor = document.getElementById('recall-email');
-        let countdown = 10;
-        const statusMessage = document.getElementById('status-message');
+        // const displayMessage = document.getElementById('display-message');
+        // let timeoutId = 0;
+        // const sendEmailAnchor = document.getElementById('send-email');
+        // const cancelEmailAnchor = document.getElementById('recall-email');
+        // let countdown = 10;
+        // const statusMessage = document.getElementById('status-message');
 
 
 
-        sendEmailAnchor.addEventListener('click', SendEmail);
-        cancelEmailAnchor.addEventListener('click', cancelEmail);
+        // sendEmailAnchor.addEventListener('click', SendEmail);
+        // cancelEmailAnchor.addEventListener('click', cancelEmail);
 
-        function SendEmail(e) {
-            e.preventDefault();
-            timeoutId = setTimeout(countDownToSend);
+        // function SendEmail(e) {
+        //     e.preventDefault();
+        //     timeoutId = setTimeout(countDownToSend);
 
             
-        }
+        // }
 
-        function countDownToSend(){
-            if(countdown > 0) {
-                statusMessage.innerText = `Email will send in ${countdown} seconds...`
-                countdown--;
-                timeoutId = setTimeout(countDownToSend, 1000);
-            } else {
-                actuallySendEmail();
-                countdown = 10;
-            }
-        }
-        function cancelEmail(e) {
+        // function countDownToSend(){
+        //     if(countdown > 0) {
+        //         statusMessage.innerText = `Email will send in ${countdown} seconds...`
+        //         countdown--;
+        //         timeoutId = setTimeout(countDownToSend, 1000);
+        //     } else {
+        //         actuallySendEmail();
+        //         countdown = 10;
+        //     }
+        // }
+        // function cancelEmail(e) {
+        //     e.preventDefault();
+        //     clearTimeout(timeoutId);
+        //     CancelSendEmail();
+        // }
+
+        // function actuallySendEmail(){
+        //     displayMessage.innerText = 'The email has been sent!!!';
+        // }
+
+        // function CancelSendEmail() {
+        //     displayMessage.innerText = 'The email has bee recalled'
+        //     statusMessage.innerText = '';
+        // }
+        
+
+        // Forms
+        
+        const submitBtn = document.getElementById('submit');
+        const list = document.getElementById('items');
+        const fullName = document.getElementById('fullName');
+        const guestValue = document.getElementById('guests');
+        const totalGuestSection = document.getElementById('totalGuests');
+        let totalGuestCount = 0;
+
+        submitBtn.addEventListener('click', submitAction);
+        function submitAction(e) {
             e.preventDefault();
-            clearTimeout(timeoutId);
-            CancelSendEmail();
-        }
-
-        function actuallySendEmail(){
-            displayMessage.innerText = 'The email has been sent!!!';
-        }
-
-        function CancelSendEmail() {
-            displayMessage.innerText = 'The email has bee recalled'
-            statusMessage.innerText = '';
-        }
+            const li = document.createElement('li');
+            li.innerText = fullName.value;
+            list.appendChild(li);
+            fullName.value = '';
         
-
-        
-        
+            totalGuestCount += guestValue.valueAsNumber; 
+            totalGuestSection.innerText = totalGuestCount;
+            guestValue.value = 0;
+        }
         
 
         </script>

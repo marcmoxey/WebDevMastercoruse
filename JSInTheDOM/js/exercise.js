@@ -215,3 +215,61 @@ document.addEventListener('keydown', (e) => {
         toggleBtn.textContent = 'Off';
     }
   }
+
+
+  // Timed Events
+
+  setTimeout(() => {
+    console.log('hello after 2 seconds');
+    
+  }, 2000);
+
+const delayedBtn = document.getElementById('delayedBtn');
+
+const delayedMsg = document.getElementById('delayedMsg');
+
+delayedBtn.addEventListener('click',showMessage);
+
+function showMessage() {
+  setTimeout(() => {
+    delayedMsg.innerText = 'this is a message';
+  }, 3000);
+}
+
+
+const hideBtn = document.getElementById('hideBtn');
+const textToHide = document.getElementById('textToHide'); 
+let counterTilHidden = 5;
+
+hideBtn.addEventListener('click', hideMessage);
+
+function hideMessage() {
+  setTimeout(() => {
+
+    textToHide.style.display = 'none';
+  }, 5000);
+}
+
+const bgBtn = document.getElementById('bgBtn');
+const page = document.body; 
+bgBtn.addEventListener('click', changeBackground);
+
+function changeBackground(){
+  setTimeout(() => {
+    page.style.backgroundColor = 'orange';
+  }, 2000);
+}
+
+const countDownTimer = document.getElementById('countdown');
+let timer = 3;
+
+function tick() {
+  if(timer > 3) {
+    counterText.textContent = timer;
+    setTimeout(tick,1000)
+  } else {
+    countDownTimer.textContent = 'Go';
+  }
+}
+
+tick();
