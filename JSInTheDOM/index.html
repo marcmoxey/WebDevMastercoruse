@@ -157,9 +157,12 @@
              e.preventDefault(); 
             const li = document.createElement('li');
             li.innerText = `Li #${i}`;
+            li.classList.add('new-item');
             i++
             list.appendChild(li);
             //addAction.removeEventListener('click', addFromLink); // remove lister
+
+            setTimeout(removeNewItemClass, 2000); // once two 2 seconds pass call this method
        }
        //(e) =>  {
         //     e.preventDefault(); // 
@@ -203,6 +206,12 @@
         // }
         
         // Timed Actions 
+
+        function removeNewItemClass(){
+            const items = list.querySelectorAll('.new-item');
+            const itemsArray = Array.from(items);
+            itemsArray.forEach(el => el.classList.remove('new-item')); 
+        }
        
 
         
