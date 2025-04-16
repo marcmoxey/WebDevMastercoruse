@@ -163,3 +163,55 @@ const people = [
   });
 
   linkList.appendChild(fragment2);
+
+
+  // Events
+
+  const clickMeBtn = document.getElementById('clickMe');
+  const counterText = document.getElementById('count')
+  let counter = 0;
+
+  function upCounter()
+  {
+      counter++;
+      counterText.innerText  = counter;
+  }
+
+  clickMeBtn.addEventListener('click',upCounter);
+
+  const newBox = document.getElementById('newBox'); 
+
+  newBox.addEventListener('mouseover', () => {
+    newBox.style.backgroundColor = 'green';
+  });
+  newBox.addEventListener('mouseout', () => {
+    newBox.style.backgroundColor = 'lightgrey';
+  });
+
+  const keyName = document.getElementById('keyName');
+
+document.addEventListener('keydown', (e) => {
+    keyName.textContent = e.key
+  });
+
+  const textInput = document.getElementById('textInput');
+  const clearBtn = document.getElementById('clearBtn')
+
+  clearBtn.addEventListener('click', clearText);
+
+  function clearText(){
+    textInput.value = '';
+  }
+
+  let toggleBtn = document.getElementById('toggleBtn');
+  toggleBtn.addEventListener('click', OnOff);
+
+  function OnOff() {
+    if (toggleBtn.textContent === 'Off')  {
+
+      toggleBtn.textContent = 'On';
+
+    } else if (toggleBtn.textContent === 'On') {
+        toggleBtn.textContent = 'Off';
+    }
+  }

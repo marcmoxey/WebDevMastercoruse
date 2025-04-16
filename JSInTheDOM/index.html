@@ -9,13 +9,14 @@
     <body>
         <main>
             <h1>Welcome to the DOM Demo</h1>
-            <p id="first-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad velit, officiis doloremque harum laborum earum et. Laborum numquam labore porro expedita ullam totam! Nostrum!</p>
+            <!-- <p id="first-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad velit, officiis doloremque harum laborum earum et. Laborum numquam labore porro expedita ullam totam! Nostrum!</p>
             
             <p id="second-paragraph" class="support-paragraph d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque nobis magnam odio ratione! Veniam?</p>
 
-            <p id="third-paragraph" class="support-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, voluptas ab? Veniam itaque nulla quaerat. Nam, consectetur quaerat. Nemo, distinctio.</p>
+            <p id="third-paragraph" class="support-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, voluptas ab? Veniam itaque nulla quaerat. Nam, consectetur quaerat. Nemo, distinctio.</p> -->
 
             <div id="list-section">
+                <a id="add-to-list" href="#">Add New Element to list</a>
                 <ul id="key-items">
                     <li>Our First LI</li>
                     <li>Our Second LI</li>
@@ -28,6 +29,7 @@
             </div>
 
         <script>
+            'use strict';
 
         // DOM / Document - holds all the objects on the page
         // Window - global scope 
@@ -124,8 +126,8 @@
         // //console.log(list);
         // list.innerHTML += '<li>Our Fourth Li</li>';
 
-        const foods=['Hamburger', 'Hot Dogs', 'Pasta', 'Bread'];
-        const foodList = document.getElementById('good-foods');
+        //const foods=['Hamburger', 'Hot Dogs', 'Pasta', 'Bread'];
+        //const foodList = document.getElementById('good-foods');
         // foods.forEach(food => {
         //     // foodList.innerHTML += `<li>${food}</li>`;
         //     const el = document.createElement('li');
@@ -134,19 +136,73 @@
         // });
         
         // creating a fragment
-        const fragment = new DocumentFragment();
+        /* const fragment = new DocumentFragment();
         foods.forEach(food => {
             const el = document.createElement('li')
             el.innerHTML = food; 
             fragment.appendChild(el);
         });
-
+           foodList.appendChild(fragment);
+            */
         // add fragment to page
-        foodList.appendChild(fragment);
+     
         
+        // Events 
+        const list = document.getElementById('key-items');
+        const addAction = document.getElementById('add-to-list');
+        let i = 4;
+       addAction.addEventListener('click', addFromLink);
+       
+       function addFromLink(e) {
+             e.preventDefault(); 
+            const li = document.createElement('li');
+            li.innerText = `Li #${i}`;
+            i++
+            list.appendChild(li);
+            //addAction.removeEventListener('click', addFromLink); // remove lister
+       }
+       //(e) =>  {
+        //     e.preventDefault(); // 
+        //     const li = document.createElement('li');
+        //     li.innerText = `Li #${i}`;
+        //     i++
+        //     list.appendChild(li);
+
+        // }); 
+
+
+
+        // const mainEl = document.querySelector('main');
+        // const list = document.getElementById('key-items');
+        // const mainHeading = document.querySelector('h1');
+
+        // mainEl.addEventListener('click', addLi);
+        // mainHeading.addEventListener('click', addLiFromH1);
+
+        // let i = 4;
+
+        // function addLi (e) {
+        //    const fragment = document.createDocumentFragment();
+        //    const li = document.createElement('li');
+        //    li.innerText = `LI #${i}`;
+        //    i++;
+        //    fragment.appendChild(li);
+        //    list.appendChild(fragment);
+            
+        // }
+
+        // function addLiFromH1 (e) {
+        //     e.stopPropagation(); // stop the click event from bubbling up
+        //    const fragment = document.createDocumentFragment();
+        //    const li = document.createElement('li');
+        //    li.innerText = `LI from H1 #${i}`;
+        //    i++;
+        //    fragment.appendChild(li);
+        //    list.appendChild(fragment);
+            
+        // }
         
-        
-        
+        // Timed Actions 
        
 
         
