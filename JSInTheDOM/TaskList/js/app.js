@@ -8,12 +8,33 @@
         // get the form and its elements
         const frm = document.getElementById('taskForm');
         pageItems.taskList = document.getElementById('taskList');
-        pageItems.taskInput = frm.getElementById('taskInput');
-        pageItems.submit = frm.getElementById('submit');
+        pageItems.taskInput = frm.querySelector('#taskInput');
+        pageItems.submit = frm.querySelector('#submit');
+        pageItems.removeBtn = frm.querySelector('#remove');
        
         pageItems.submit.addEventListener('click', addTask);
+        pageItems.taskList.addEventListener('click', completeTask);
+        pageItems.removeBtn.addEventListener('click',removeCompletedTask);
     };
 
+    function removeCompletedTask(e){
+        e.preventDefault();
+        const items = pageItems.taskList.querySelectorAll('li');
+        const itemArray = Array.from(items);
+        itemArray.forEach( el => {
+            if(el.classList.contains('completed-task')) {
+                pageItems.taskList.removeChild(el);
+            }
+        });
+    }
+    function completeTask(e)
+    {
+        if(e.target.classList.contains('completed-task')) {
+            e.target.classList.remove('completed-task');
+        } else {
+            e.target.classList.add('completed-task');
+        }
+    }
     // function event will call 
     function addTask(e) {
         e.preventDefault();
@@ -27,4 +48,6 @@
         pageItems.taskList.value = '';
 
     }
+
+    
 })(window.app = window.app || {}); // IIFE
