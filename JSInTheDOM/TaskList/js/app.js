@@ -11,7 +11,8 @@
         pageItems.taskInput = frm.querySelector('#taskInput');
         pageItems.submit = frm.querySelector('#submit');
         pageItems.removeBtn = frm.querySelector('#remove');
-       
+    
+        
         pageItems.submit.addEventListener('click', addTask);
         pageItems.taskList.addEventListener('click', completeTask);
         pageItems.removeBtn.addEventListener('click',removeCompletedTask);
@@ -46,6 +47,20 @@
         pageItems.taskList.appendChild(li);
         // clear the input field
         pageItems.taskList.value = '';
+
+            // Sort the task list
+    const tasks = Array.from(pageItems.taskList.querySelectorAll('li'))
+    .map(li => li.textContent)
+    .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+
+// Clear the current list and re-add sorted items
+pageItems.taskList.innerHTML = '';
+tasks.forEach(task => {
+    const sortedLi = document.createElement('li');
+    sortedLi.textContent = task;
+    pageItems.taskList.appendChild(sortedLi);
+});
+
 
     }
 
