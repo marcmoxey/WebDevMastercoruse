@@ -1,0 +1,10 @@
+User-agent: * 
+Crawl-delay: 120
+Disallow: /api/ 
+Disallow: /admin.html
+Disallow: /site/plugins
+Allow: /site/plugins/mypage.html 
+
+User-agent: Googlebot
+Disallow: /api/ 
+Disallow: /site/plugins
