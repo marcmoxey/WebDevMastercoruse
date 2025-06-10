@@ -1,0 +1,52 @@
+/* Setup Css */
+#first-div {
+    background-color: blue;
+    height: 100px;
+    width: auto;
+    color: white;
+    z-index: 50; /* z-index is used to control the stacking order of elements */
+}
+
+#second-div {
+    color: white ;
+    background-color: red;
+    height: 100px;
+    width: auto;
+    z-index: 5;
+}
+
+#inner-div {
+    background-color: grey;
+    width: 25px;
+    height: 25px;
+}
+
+/* Positioning CSS */ 
+.relative {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    /* left: 50%;
+    transform: translate(-50%);  */
+}
+
+.absolute {
+    position: absolute; /* position base on the confiner it in */
+    bottom: 0;
+    right: 0;
+  
+}
+
+
+.fixed {
+    position: fixed; /* position base on the viewport */
+    bottom: 10px;
+    right: 10px;
+   
+}
+
+.sticky {
+    position: sticky; /* position base on the scroll */
+    top: 0;
+  
+}
