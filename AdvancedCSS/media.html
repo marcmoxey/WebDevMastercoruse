@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <main>
+        <h1>Media Queries</h1>
+        <div id="size5" class="size-heading">TV sized</div>
+        <div id="size4" class="size-heading">Desktop sized</div>
+        <div id="size3" class="size-heading">Tablet sized</div>
+        <div id="size2" class="size-heading">Mobile sized</div>
+        <div id="size1" class="size-heading">Small Mobile sized</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nihil soluta quos consectetur placeat velit, quidem impedit quaerat maxime voluptate quis ipsa sed omnis blanditiis et nesciunt, adipisci tempore doloremque minus. Veritatis ducimus libero quis.</p>
+    </main> 
+    <picture>
+        <source srcset="max-full.png" media="(min-width: 1000px)">
+        <source srcset="max-med.png" media="(min-width: 600px)">
+        <img src="max-min.png" alt="Max the wonder dog">
+    </picture>
+</body>
+</html>
