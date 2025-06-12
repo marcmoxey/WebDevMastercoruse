@@ -1,0 +1,16 @@
+p {
+  color: #06336d;
+}
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.container-item {
+  background-color: #06336d;
+  height: 100px;
+}
+.container-item P {
+  color: white;
+}
