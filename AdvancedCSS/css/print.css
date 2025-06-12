@@ -1,0 +1,57 @@
+#section1 {
+    background-color: lightblue;
+
+}
+
+header, footer {
+    background-color: darkblue;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+@media print {
+    *, 
+    *::before,
+    *::after {
+        background-color: #fff !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    @page {
+        margin: 1in;
+        size: letter portrait;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    /* body > *:not(main) {
+        display: none;;
+    } */
+
+    header,footer {
+        display: none;
+    }
+
+    h2 {
+        page-break-before: always;
+    }
+
+    ol {
+        page-break-inside: avoid;
+    }
+
+    p {
+        orphans: 2 ; /* how many lines on the previous page  */
+        widows: 2; /* How many line in the next page */
+    }
+}
