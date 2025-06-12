@@ -4,6 +4,13 @@
 
     };
 
+app.promisesStartup = function() {
+    pageItems.loadData = document.getElementById('loadData');
+    pageItems.waitIndicator = document.getElementById('wait-indicator');
+
+    pageItems.loadData.addEventListener('click', loadChainedPromiseData);
+}
+
     app.todoStartup = function(){
         // get the form and its elements
         const frm = document.getElementById('taskForm');
@@ -21,6 +28,62 @@
         //localStorage.clear(); // Clear localStorage for testing purposes
         //localStorage.removeItem('taskList'); // Remove specific item from localStorage
     };
+
+    function loadSimplePromiseData(e) {
+        pageItems.waitIndicator.style.display = 'block';
+
+        // Create a promise that does some work and either resolves or rejects 
+        const promise = new Promise(function(resolve, reject) {
+            setTimeout(() => reject('Rejected the promise'), 3000);
+        });
+
+        // Listen for the promise to resolve or reject
+        promise.then (
+            result =>  console.log(result),
+            reason => console.error(reason)
+        )
+        // optional to perform clean up work
+        .finally(() => {
+            console.log('This is now complete');
+            pageItems.waitIndicator.style.display = 'none';
+            
+        });
+
+    
+    }
+
+    function loadChainedPromiseData(e) {
+        pageItems.waitIndicator.style.display = 'block';
+        const promise = new Promise(function(resolve, reject) {
+            setTimeout(() => resolve('Promise #1'), 3000);
+        })
+
+        promise.then(result => {
+            console.log('Promise #1 succeeded');
+            return new Promise(function(resolve, reject) {
+                setTimeout(() => reject('Promise #2'), 2000);
+            });
+        })
+        .then(result => {
+            console.log('Promise #2 succeeded');
+
+            
+        })
+        .catch(reason => {
+            console.error(`We had a promise failure at ${reason}`);
+            
+        })
+        //      .then(result => {
+        //     console.log('Promise after the catch succeeded');
+
+            
+        // })
+        .finally(() => { 
+            console.log('Complete all promises');
+             pageItems.waitIndicator.style.display = 'none';
+            
+        })
+    }
 
     function loadFromStorage() {
 
