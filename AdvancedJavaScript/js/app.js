@@ -8,7 +8,7 @@ app.promisesStartup = function() {
     pageItems.loadData = document.getElementById('loadData');
     pageItems.waitIndicator = document.getElementById('wait-indicator');
 
-    pageItems.loadData.addEventListener('click', loadChainedPromiseData);
+    pageItems.loadData.addEventListener('click', loadAsyncData);
 }
 
     app.todoStartup = function(){
@@ -83,6 +83,65 @@ app.promisesStartup = function() {
              pageItems.waitIndicator.style.display = 'none';
             
         })
+    }
+
+    function loadPromiseSetsData(e) {
+        const promise1 = new Promise(function(resolve, reject) 
+        {
+            setTimeout(() => reject('Promise #1'), 4000);
+        });
+             const promise2 = new Promise(function(resolve, reject) 
+        {
+            setTimeout(() => reject('Promise #2'), 1000);
+        });
+             const promise3 = new Promise(function(resolve, reject) 
+        {
+            setTimeout(() => reject('Promise #3'), 1500);
+        });
+
+        // reject if any fail
+        // Promise.all([promise1, promise2, promise3])
+        // .then(results => console.log(results))
+        // .catch(reason => console.error(reason));
+
+        // All of them to be run
+        //  Promise.allSettled([promise1, promise2, promise3])
+        //  .then(results => console.log(results));
+         
+
+        // First to finish 
+        // Promise.race([promise1, promise2, promise3])
+        // .then(results => console.log(results))
+        // .catch(reason => console.error(reason));
+        
+
+        // First fulfilled (success) or all errors
+        Promise.any([promise1, promise2, promise3])
+        .then(results => console.log(results))
+        .catch(reason => console.error(reason.errors));
+    }
+
+    async function loadAsyncData(e){
+        try {
+                const results = await timingDemo('Promise #1'); 
+                console.log(results);
+
+                const results2 = await timingDemo('Promise #2'); 
+                console.log(results2);
+        } catch(err) 
+        {
+            console.error(`There was an error in ${err}`);
+            
+        }
+
+        console.log('We are all done');
+        
+    }
+
+    function timingDemo(message) {
+        return new Promise((resolve, reject) => { 
+            setTimeout(() => reject(message), 2000);
+        });
     }
 
     function loadFromStorage() {
