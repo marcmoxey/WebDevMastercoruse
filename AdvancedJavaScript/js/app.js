@@ -6,7 +6,7 @@
     pageItems.loadData = document.getElementById("loadData");
     pageItems.waitIndicator = document.getElementById("wait-indicator");
 
-    pageItems.loadData.addEventListener("click", loadApiData);
+    pageItems.loadData.addEventListener("click", uploadDataToApi);
   };
 
   app.todoStartup = function () {
@@ -26,8 +26,32 @@
     //localStorage.removeItem('taskList'); // Remove specific item from localStorage
   };
 
+  function uploadDataToApi(e)
+  {
+    const data = {
+      firstName: 'Marc',
+      lastName: 'Moxey',
+      isAlive: true
+    };
+
+    fetch('https://webhook.site/0424bb93-e38a-4dd9-a95a-b3c6af51413d', {
+      method: 'POST',
+      mode: 'no-cors', 
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(
+      response => console.log(response),
+      reason => console.error(reason)
+      
+    );
+  }
+
+
   function loadApiData(e) {
-    fetch('https://swapi.dev/api/people/1') // creates a promise 
+    fetch('https://pokeapi.co/api/v2/pokemon/ditto') // creates a promise 
     .then(response => {
         console.log(response);
         return response.json(); // convert response to json
