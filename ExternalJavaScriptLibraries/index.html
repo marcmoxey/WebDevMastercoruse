@@ -1,82 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/site.css">
-    <link rel="shortcut icon" href="favicon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css"
+    />
+    <link rel="stylesheet" href="./css/site.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
     <title>External Libraries Demo</title>
-    
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <h1>External Libraries Demo</h1>
-        <form  id="taskForm"   action="" method="post">
-            <div>
-                <label for="taskInput">Task:</label>
-                <input type="text" id="taskInput" name="taskInput" required />
-            </div>
-            <div>
-                <button id="submit" type="submit">Add taskItem</button>
-                <button type="reset">Clear Form</button>
-            </div>
-        </form>
+      <h1>External Libraries Demo</h1>
+      <form id="taskForm" action="" method="post">
         <div>
-            <ul id="taskList">
-               
-            </ul>
+          <label for="taskInput">Task:</label>
+          <input type="text" id="taskInput" name="taskInput" required />
         </div>
         <div>
-             <canvas id="myChart" width="400" height="400"></canvas>
+          <button id="submit" type="submit">Add taskItem</button>
+          <button type="reset">Clear Form</button>
         </div>
-        
+      </form>
+      <div>
+        <ul id="taskList"></ul>
+      </div>
+      <div>
+        <canvas id="myChart" width="400" height="400"></canvas>
+      </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Toastr-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
-  const ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-      datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 8, 5, 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-</script>
- 
-
-
-   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
-       $('#taskForm').submit(function(e) {
-        e.preventDefault();
-        const li = document.createElement('li');
-        li.innerHTML = $('#taskInput').val();
-        $('#taskList').append(li);
-        $('#taskInput').val('');
-
-       });
-
-       $(document).on('click', 'li', function() {
-            $(this).toggleClass('completed-task');
-        
-       });
+      toastr.info("Hello World");
     </script>
 
-</body>
+    <!--Chart.js-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"
+      integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [12, 19, 8, 5, 2, 3],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+
+    <!-- jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#taskForm").submit(function (e) {
+        e.preventDefault();
+        const li = document.createElement("li");
+        li.innerHTML = $("#taskInput").val();
+        $("#taskList").append(li);
+        $("#taskInput").val("");
+      });
+
+      $(document).on("click", "li", function () {
+        $(this).toggleClass("completed-task");
+      });
+    </script>
+  </body>
 </html>
