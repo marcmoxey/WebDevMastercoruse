@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/site.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>External Libraries Demo</title>
+</head>
+<body>
+    <main>
+        <h1>External Libraries Demo</h1>
+        <form  id="taskForm"   action="" method="post">
+            <div>
+                <label for="taskInput">Task:</label>
+                <input type="text" id="taskInput" name="taskInput" required />
+            </div>
+            <div>
+                <button id="submit" type="submit">Add taskItem</button>
+                <button type="reset">Clear Form</button>
+            </div>
+        </form>
+        <div>
+            <ul id="taskList">
+               
+            </ul>
+        </div>
+        
+    </main>
+   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+       $('#taskForm').submit(function(e) {
+        e.preventDefault();
+        const li = document.createElement('li');
+        li.innerHTML = $('#taskInput').val();
+        $('#taskList').append(li);
+        $('#taskInput').val('');
+
+       });
+
+       $(document).on('click', 'li', function() {
+            $(this).toggleClass('completed-task');
+        
+       });
+    </script>
+    
+</body>
+</html>
