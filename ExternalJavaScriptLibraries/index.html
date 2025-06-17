@@ -32,6 +32,15 @@
         <canvas id="myChart" width="400" height="400"></canvas>
       </div>
     </main>
+    <!--Luxon-->
+  <script src=" https://cdn.jsdelivr.net/npm/luxon@3.6.1/build/global/luxon.min.js"></script>
+  <script>
+    const DateTime = luxon.DateTime; // alias
+    const val = DateTime.now().setZone('America/New_York').minus({weeks:1}).endOf('day').toISO();
+    console.log(val);
+  </script>
+
+
     <!-- Toastr-->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
