@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 36px;
+     line-height: 1.5rem; 
+}
+
+body {
+    max-width: 1440px;
+   margin: auto;
+}
+
+
+#hero h1 {
+    position: absolute;
+    bottom: 910px;
+    right: 720px;
+    font-size: 4em;
+    color: white;
+    text-transform: uppercase;
+    text-align: right;
+    
+
+}
+
+#hero img {
+    max-width: 100%;
+}
+
+#contact-me h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+#contact-form {
+    visibility: hidden;
+}
+
+#portfolio-section h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+#portfolio-section a {
+    color: yellow;
+    font-weight: bold;
+}
+
+#portfolio-section {
+    background-color: black;
+}
+
+#my-story h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+footer {
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    font-size: .67rem;
+    padding: .4rem; 
+}
