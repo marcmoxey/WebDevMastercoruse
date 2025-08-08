@@ -1,72 +1,129 @@
-* {
-    padding: 0;
-    margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 html {
+
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
     font-size: 36px;
-     line-height: 1.5rem; 
 }
 
 body {
     max-width: 1440px;
-   margin: auto;
+    margin: auto; 
 }
 
-
-#hero h1 {
-    position: absolute;
-    bottom: 910px;
-    right: 720px;
-    font-size: 4em;
-    color: white;
+h1 {
+    font-weight: 700;
+    color: #fff;
+    font-size: 4rem;
     text-transform: uppercase;
     text-align: right;
-    
-
 }
 
-#hero img {
-    max-width: 100%;
-}
-
-#contact-me h2 {
-    font-weight: bold;
-    text-transform: uppercase;
-    
-}
-
-#contact-form {
-    visibility: hidden;
-}
-
-#portfolio-section h2 {
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-}
-
-#portfolio-section a {
-    color: yellow;
-    font-weight: bold;
-}
-
-#portfolio-section {
-    background-color: black;
-}
-
-#my-story h2 {
-    font-weight: bold;
+h2 {
+    font-weight: 700;
+    color: #000;
+    font-size: 2rem;
     text-transform: uppercase;
 }
 
+p {
+    line-height: 1.5rem;
+}
 
 
+form {
+    padding: 0 15%;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+form > div {
+    display: flex;
+    justify-content: center;
+}
+input, textarea {
+    font-size: 1rem;
+
+}
+
+button {
+    font-size: 0.75rem;
+    padding: 0.25rem 5%;
+    margin: 0.25rem;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    font-size: 0.67rem;
+    text-align: right;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
 
 footer {
     background-color: #000;
-    text-align: center;
     color: #fff;
-    font-size: .67rem;
-    padding: .4rem; 
+    font-size: 0.67rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+
+}
+
+.hero h1 {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+}
+
+#contact-me h2{
+    margin: 0;
+    text-align: center;
+}
+
+#portfolio-section {
+    position: relative;
+
+}
+#portfolio-section img {
+    width: 100%;
+
+}
+    
+#portfolio-section > div {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+ }
+
+ #portfolio-section > div > h2 {
+    color: #fff;
+    margin: 0;
+ }
+
+ #portfolio-section div > a {
+    color: #d8b33c;
+    font-size: 2rem;
+    margin: 0;
+ }
+
+ #my-story {
+    padding-left: 15%;
+    padding-right: 15%;
+
+ }
+ 
+ #my-story h2 {
+    margin: 1rem 0;
+    
+ }
