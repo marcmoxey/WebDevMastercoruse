@@ -1,7 +1,11 @@
 (function(app) {
 
+    app.portfolioItems = [];
+    app.selectedItem = {};
+
     app.homepage = function() {
         setCopyrightDate();
+        wireContactForm();
     }; 
 
     app.portfolio = function() {
@@ -10,10 +14,93 @@
 
     app.workItem = function() {
         setCopyrightDate();
+        loadPageData();
+        loadSpecificItem();
+        updateItemPage();
     };
 
     function setCopyrightDate() {
         const date = new Date();
         document.getElementById('copyrightYear').innerText = date.getFullYear();
+    }
+
+    function wireContactForm() {
+        const contactForm= document.getElementById('contact-form');
+        contactForm.onsubmit = contactFormSubmit;
+    }
+
+    function contactFormSubmit(e) {
+        e.preventDefault();
+        const contactForm = document.getElementById('contact-form');
+        const name = contactForm.querySelector('#name')
+        const email = contactForm.querySelector('#email');
+        const message = contactForm.querySelector('#message');
+
+        const mailTo = `mailto:${email.value}?subject=Contact From ${name.value}&body=${message.value}`;
+        window.open(mailTo);
+
+        name.value = '';
+        email.value = '';
+        message.value = '';
+    }
+
+    async function loadPageData() {
+        const cacheData = sessionStorage.getItem('site-data');
+
+        if(cacheData !== null) {
+            app.portfolioItems = JSON.parse(cacheData);
+        } else {
+            const rawData = await fetch('sitedata.json');
+            const data = await rawData.json();
+            app.portfolioItems = data;
+            sessionStorage.setItem('site-data',JSON.stringify(data));
+      
+        }
+    }
+
+    // https://iamticorey.com?course=1&test=No%20Way
+    // https://allyreynolds.com?item=2
+    function loadSpecificItem(){
+        const params = new URLSearchParams(window.location.search);
+        let item = Number.parseInt(params.get('item'))
+
+        if (item > app.portfolioItems.length || item < 1) {
+            // our items: 1-3
+            // our array ids should be 0-2
+            // our array length should be 3
+            item = 1
+        }
+
+        app.selectedItem = app.portfolioItems[item - 1];
+        app.selectedItem.id = item;
+    }
+
+    function updateItemPage() {
+        const header = document.getElementById('work-item-header');
+        header.innerText = `0${app.selectedItem.id}. ${app.selectedItem.title}`;
+
+        const image = document.getElementById('work-item-image');
+        image.src = app.selectedItem.largeImage;
+        image.alt = app.selectedItem.largeImageAlt;
+
+        const projectText = document.querySelector('#project-text');
+        projectText.innerText = app.selectedItem.projectText;
+
+
+        const originalTechList = document.querySelector('#technologies-text ul');
+        const technologySection = document.getElementById('technologies-text');
+        const ul = document.createElement('ul');
+
+        app.selectedItem.technologies.forEach(el => {   
+            const li = document.createElement('li');
+            li.innerText = el;
+            ul.appendChild(li);
+        });
+        
+        originalTechList.remove();
+        technologySection.appendChild(ul);
+        
+        const challengesText = document.querySelector('#challenges-text');
+        challengesText.innerText = app.selectedItem.challengesText;
     }
 })(window.app = window.app || {});

@@ -13,8 +13,8 @@
     text-align: center;
     border: 1px solid black;
 }
-/* 
-.info-container {
+
+/* .info-container {
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 100px 1fr 1fr 100px;
@@ -22,7 +22,7 @@
         "left1 main main right1"
         ". main main ."
         "left2 left3 right2 right3";
-} */
+}  */
 
 .info-container {
     display: grid;

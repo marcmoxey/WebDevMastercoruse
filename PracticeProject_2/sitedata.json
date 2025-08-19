@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Kids sports website", 
+        "smallImage": "img/KidsSportsWebsite.png",
+        "smallImageAlt": "Overview of kids sport website",
+        "largeImage": "img/KidsSportsWebsiteFull.jpg",
+        "largeImageAlt": "Shows of a website for kids sports with multiple views.",
+        "projectText":" Project #1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam cupiditate iusto nostrum facilis quos ut ratione incidunt id hic.",
+        "challengesText": "Challenges #1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam cupiditate iusto nostrum facilis quos ut ratione incidunt id hic.",
+        "technologies": ["HTML","CSS","JavaScript","C#"]
+    },
+    {
+        "title": "Pet adoption campaign", 
+        "smallImage": "./img/PetAdoptionCampaign.png",
+        "smallImageAlt": "Overview of pet adoption campaign",
+        "largeImage": "./img/PetAdoptionCampaignFull.jpg",
+        "largeImageAlt": "Shows of a website for pet adoption campaign with multiple views.",
+        "projectText":" Project #2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam cupiditate iusto nostrum facilis quos ut ratione incidunt id hic.",
+        "challengesText": "Challenges #2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam cupiditate iusto nostrum facilis quos ut ratione incidunt id hic.",
+        "technologies": ["PDF","InDesign","Custom Clipart Design"]
+    },
+    {
+              "title": "Pub website",
+              "smallImage": "./img/PubWebsite.png",
+              "smallImageAlt": "Overview of pub website",
+              "largeImage": "./img/PubWebsiteFull.jpg",
+              "largeImageAlt": "Shows of a website for pub with multiple views.",
+              "projectText": " Project #3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam cupiditate iusto nostrum facilis quos ut ratione incidunt id hic.",
+              "challengesText": "Challenges #3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam cupiditate iusto nostrum facilis quos ut ratione incidunt id hic.",
+              "technologies": ["HTML","CSS", "JavaScript", "LocalStorage"]
+    }
+]
